@@ -1,31 +1,563 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <title>Willian Ferreira | FullStack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:url"           content="https://cv.fluttership.com.br" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Alexandro Castro" />
+    <meta property="og:description"   content="CV Alexandro Castro" />
+    <meta property="og:image"         content="https://i.imgur.com/5vIKSig.png" />
+    <meta name="description" content="CV Alexandro Castro">
+    <meta name="keywords" content="developer, canada, europe, cv, card">
+    <meta name="author" content="Alexandro Castro">
+    <title>Willian Ferreira | Portfólio</title>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="https://i.imgur.com/5vIKSig.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
+       <!--  Vue App -->
+    <div id="app">
+             <!--  Menu -->
+       <b-sidebar :width="110" id="sidebar-border" v-model="menu" bg-variant="none" sidebar-class="main-menu">
+        <b-navbar-nav data-scroll-header class="text-center" align="center">
+          <a class="pb-4" @click="menuDrawer(false, true)" data-scroll href="#home"><i class="fas fa-home"></i></a>
+          <a class="pb-4" @click="menuDrawer(false, true)" data-scroll href="#about"><i class="fas fa-user-tie"></i></a>
+          <a class="pb-4" @click="menuDrawer(false, true)" data-scroll href="#experience"><i class="fas fa-briefcase"></i></a>
+          <a class="pb-4" @click="menuDrawer(false, true)" data-scroll href="#certs"><i class="fas fa-graduation-cap"></i></a>
+          <a class="pb-4" @click="menuDrawer(false, true)" data-scroll href="#projects"><i class="fas fa-tasks"></i></a>
+          <a class="pb-4" @click="menuDrawer(false, true)" data-scroll href="#contact"><i class="fas fa-comment-dots"></i></a>
+        </b-navbar-nav>
+        <template v-slot:footer>
+          <div class="d-flex text-light copyright align-items-center px-3 py-2">
+           <span class="p-4"> © 2020 Willian Ferreira </span>
+          </div>
+         </template>
+    </b-sidebar>
+             <!-- end menu -->
+             <!--  top -->
+      <div class="top-image full" id="home">
+          <b-container >
+          <div class="menu-icon p-4 text-right" @click="menuDrawer(!menu)"  v-if="isMobile()">
+            <b-button variant="none">
+               <i class="fas text-white fa-bars"></i>
+            </b-button>
+          </div>
+            <b-row class="text-center full" :class="isMobile() ? 'mobile-top' : ''">
+              <b-col  cols="12" align-self="center">
+                <p>
+                  <b-avatar class="fixBootstrapAvatar" size="lg">
+                    <b-img :width="90" src="assets/me.jpeg" alt="me"></b-img>
+                  </b-avatar>
+                </p>
+                <span class="name">Willian Ferreira</span>
+                <p> <span class="whoami">I'm a  
+                  <span class="whoami whoami-animation"> {{whoami}}</span>
+                  <p>
+                    <!-- href="https://docs.google.com/document/d/1GuHjv0U_z-HUgL-2JQi1-z264uP18vA7" -->
+                    <b-button  target="blank" variant="danger">Hire me</b-button>
+                  </p>
+                  <p>
+                    <a href="https://www.linkedin.com/in/sirwilld/" target="_blank"><i class="fab fa-linkedin text-white  socials"></i></a>
+                    <a href="https://github.com/sirwilld" target="_blank"><i class="fab fa-github text-white pl-2 socials"></i></a>
+                    <!-- <a href="https://fluttership.com.br" target="_blank"><i class="fa fa-globe text-white pl-2 socials"></i></a> -->
+                  </p>
+                </span>
+               </p>
+               </b-col>
+                  <b-col  cols="12" align-self="center" class="pt-4 mouse-wrapper">
+                    <span class="text-white ">Scroll down</span>
+                    <span class="mouse"> <span class="wheel"></span> </span>
+                  </b-col>
+            </b-row>
+</b-container>
 
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
+      <!--floating langs-->
+      <div v-if="!isMobile()">
+          <img class="lang dart"  src="assets/dart.png">
+          <img class="lang php"  src="assets/php.png">
+          <img class="lang flutter"  src="assets/flutter.png">
+          <img class="lang react"  src="assets/react.png">
+          <img class="lang angular"  src="assets/angular.png">
+          <img class="lang js"  src="assets/js.png">
+          <img class="lang bootstrap"  src="assets/bootstrap.png">
+          <img class="lang vue"  src="assets/vue.png">
+          <img class="lang jquery"  src="assets/jquery.png">
+          <img class="lang docker"  src="assets/docker.png">
+          <img class="lang mysql"  src="assets/mysql.png">
+          <img class="lang laravel"  src="assets/laravel.png">
+      </div> <!-- end floating langs-->
+       <!--  end top -->
+    </div> 
+
+       <!--  Content -->
+    <b-container >
+      <div class="spacer-inner"></div>
+       <!--  About -->
+      <section id="about" :class="menu ? 'pl-5' : ''">
+        <h2 class="title-section title-animation pb-5">About me</h2>
+        <div class="row">
+          <div class="col-12 col-lg-2 col-md-12 text-center pt-5">
+            <b-avatar class="fixBootstrapAvatar" size="lg">
+              <b-img :width="90" src="assets/me.jpeg" alt="me"></b-img>
+            </b-avatar>
+            </div>
+
+            <div class="col-12 col-lg-10 col-md-12 mt-3 p-2">
+            <div class="arrow"></div>
+            <b-card bg-variant="white" text-variant="dark" title="Hello, Company!" class="radius-card shadow-card ">
+              <div class="row">
+                <div class="col-12 col-lg-6 col-md-12">
+                <b-card-text>
+                  <p>I am Willian Ferreira, Software Engineer from Estância Velha, Rio Grande do Sul, Brazil. </p>
+                  <p>I have large experience with web development frontend and backend.</p>
+                  
+                </b-card-text>
+                <b-button href="https://docs.google.com/document/d/1GuHjv0U_z-HUgL-2JQi1-z264uP18vA7" target="blank" variant="danger"><i class="fab fa-google-drive"></i> Download my CV</b-button>
+              </div>
+              <div class="col-12 col-lg-6 col-md-12 mt-2">
+                <b-progress class="mt-2" max="100" show-value>
+                  <b-progress-bar value="80" label="PHP" variant="info"></b-progress-bar>
+                  <b-progress-bar value="20" label="NodeJS" variant="danger"></b-progress-bar>
+                </b-progress>
+                <b-progress class="mt-4" max="100" show-value>
+                  <b-progress-bar value="50" label="Laravel" variant="danger"></b-progress-bar>
+                  <b-progress-bar value="15" label="Codeigniter" variant="success"></b-progress-bar>
+                  <b-progress-bar value="20" label="Adianti" variant="primary"></b-progress-bar>
+                  <b-progress-bar value="15" label="Adonis" variant="warning"></b-progress-bar>
+                </b-progress>
+                <b-progress class="mt-4" max="100" show-value>
+                  <b-progress-bar clas value="20" label="VueJS" variant="success"></b-progress-bar>
+                  <b-progress-bar value="60" label="Angular" variant="danger"></b-progress-bar>
+                  <b-progress-bar value="20" label="jQuery" variant="info"></b-progress-bar>
+                  <b-progress-bar value="40" label="VanillaJS" variant="warning"></b-progress-bar>
+                </b-progress>
+                <b-progress class="mt-4" max="100" show-value>
+                  <b-progress-bar value="100" label="Linux" variant="info"></b-progress-bar>
+                </b-progress>
+              </div>
+            </div>
+            <!-- Cover Letter in Progress -->
+            <!-- <b-button href="#" target="blank" variant="danger"><i class="fab fa-google-drive"></i> Download my Cover Letter</b-button> -->
+          </b-card></div>
+        </div>
+      </section> 
+      <!--  End About -->
+
+       <!--  Experience -->
+      <div class="spacer-inner"></div>
+      <section id="experience" :class="menu ? 'pl-5' : ''">
+        <h2 class="title-section title-animation pb-5">Experience</h2>
+        <b-row align-h="around" class="p-1">
+          <b-row align-h="around" v-show="isMobile()" class="p-4">
+            <h2 class="title-animation " style="text-align: left !important">Academic</h2>
+            </b-row>
+        <b-card bg-variant="white" text-variant="dark"  class="radius-card col-12 col-lg-5 col-md-12">
+        <div class="timeline" v-for="(item, key) in studies" v-bind:key="key" >
+          <div  class="justify-around  row">
+            <div class="col-1  pt-1">
+              <i class="fas fa-graduation-cap text-danger"></i>
+              <div class="timeline-divider-2"></div>
+            </div>
+            <div class="col-10">
+              <span class="text-danger w-100"> {{item.title}} <b>{{item.time}}</b></span> 
+              <h5>{{item.where}}</h5>
+              <p>{{item.what}}</p>
+            </div>
+          </div>
+        </div>
+    
+       </b-card>
+       <b-row align-h="around" v-show="isMobile()" class="p-4">
+       <h2 class="title-animation " style="text-align: left !important">Jobs</h2>
+       </b-row>
+
+       
+       <b-card bg-variant="white" text-variant="dark"  class="radius-card col-12 col-lg-5 col-md-12">
+        <div class="timeline " v-for="(item, key) in jobs" v-bind:key="key" >
+          <div  class="justify-around  row">
+            <div class="col-1  pt-1">
+              <i class="fas fa-briefcase text-danger"></i>
+              <div class="timeline-divider-2"></div>
+            </div>
+            <div class="col-10">
+              <span class="text-danger w-100"> {{item.title}} <b>{{item.time}}</b></span> 
+              <h5>{{item.where}}</h5>
+              <p>{{item.what}}</p>
+            </div>
+          </div>
+        </div>
+       </b-card>
+
+        </b-row> 
+      </section>
+       <!-- End Experience -->
+
+        <!--  Projects -->
+      <div class="spacer-inner"></div>
+      <section id="certs" :class="menu ? 'pl-5' : ''">
+        <h2 class="title-section title-animation pb-5"> Certificates</h2>
+        <b-card-group deck>
+          <b-card
+          border-variant="primary"
+          header-bg-variant="primary"
+          header-text-variant="white"
+          align="center"
+          no-body
+          class="project-card"
+        >
+        <template slot="header">
+          <i class="fa fa-star"></i> VueJS <i class="fa fa-star"></i>
+        </template>
+        <a><div class="project-card-zoom project-card-zoom--xyz">
+          <b-card-img  src="assets/certs/vue.jpeg" alt="Image" bottom></b-card-img>
+        </div></a>
+        </b-card>
+          <b-card
+            border-variant="danger"
+            header-bg-variant="danger"
+            header-text-variant="white"
+            align="center"
+            no-body
+            class="project-card"
+          >
+
+        <template slot="header">
+          <i class="fa fa-star"></i> React Native <i class="fa fa-star"></i>
+        </template>
+          <a><div class="project-card-zoom project-card-zoom--xyz">
+            <b-card-img  src="assets/certs/reactnative.jpeg" alt="Image" bottom></b-card-img>
+          </div></a>
+          
+          </b-card>
+          <b-card
+          border-variant="primary"
+          header-bg-variant="primary"
+          header-text-variant="white"
+          align="center"
+          no-body
+          class="project-card"
+        >
+        <template slot="header">
+          <i class="fa fa-star"></i> Flutter <i class="fa fa-star"></i>
+        </template>
+        <a href="https://fluttership.com.br" target="blank"><div class="project-card-zoom project-card-zoom--xyz">
+          <b-card-img  src="assets/certs/flutter.jpeg" alt="Image" bottom></b-card-img>
+        </div></a>
+        </b-card>
+        <b-card
+            border-variant="danger"
+            header-bg-variant="danger"
+            header-text-variant="white"
+            align="center"
+            no-body
+            class="project-card"
+          >
+
+        <template slot="header">
+          <i class="fa fa-star"></i> PHP <i class="fa fa-star"></i>
+        </template>
+          <a ><div class="project-card-zoom project-card-zoom--xyz">
+            <b-card-img  src="assets/certs/php.jpeg" alt="Image" bottom></b-card-img>
+          </div></a>
+          
+          </b-card>
+        </b-card-group>
+        
+      </section>
+       <!-- End Projects -->
+       
+
+        <!-- Certificados -->
+      <div class="spacer-inner"></div>
+      <section id="projects" :class="menu ? 'pl-5' : ''">
+        <h2 class="title-section title-animation pb-5">Projects</h2>
+        <b-card-group deck>
+          <b-card
+          border-variant="primary"
+          header="Fluttership - Flutter Community"
+          header-bg-variant="primary"
+          header-text-variant="white"
+          align="center"
+          no-body
+          class="project-card"
+        >
+        <a href="https://fluttership.com.br" target="blank"><div class="project-card-zoom project-card-zoom--xyz">
+          <b-card-img  src="assets/fluttership.jpg" alt="Image" bottom></b-card-img>
+        </div></a>
+        </b-card>
+          <b-card
+            border-variant="danger"
+            header="Life4Sec - Tech News"
+            header-bg-variant="danger"
+            header-text-variant="white"
+            align="center"
+            no-body
+            class="project-card"
+          >
+          <a href="https://life4sec.com.br" target="blank"><div class="project-card-zoom project-card-zoom--xyz">
+            <b-card-img  src="assets/life4sec.jpg" alt="Image" bottom></b-card-img>
+          </div></a>
+          
+          </b-card>
+        </b-card-group>
+        
+      </section>
+       <!-- End Projects -->
+       
+
+         <!-- get in touch -->
+      <div class="spacer-inner"></div>
+      <section id="contact" :class="menu ? 'pl-5' : ''">
+        <h2 class="title-section title-animation">Get In Touch</h2>
+        <div class="row" :class="isMobile() ? 'p-1' : 'pl-3'" >
+          <b-jumbotron>
+            <template v-slot:lead>
+              <p>Do you want to download this website, no problem! This is open source!</p>
+              <p>Remember to star this repository!</p>
+              <p>Remember to request a merge if you find a bug or want to improve!</p>
+
+            </template>
+        
+            <hr class="my-4">
+        
+            <p>
+             Need contact me? Let's go!
+            </p>
+        
+            <div class="row">
+              <div class="p-2"><b-button variant="success" href="https://api.whatsapp.com/send?phone=5521970879050&text=Hello%20Alexandro%20Castro!"><i class="fab fa-whatsapp"></i> WhatsApp</b-button></div>
+              <div class="p-2"><b-button variant="info"  href="mailto:desenvolvimento@fluttership.com.br"> desenvolvimento@fluttership.com.br</b-button></div>
+          </div>
+          </b-jumbotron>
+      </div> 
+      </section>
+       <!-- End Projects -->
+
+    </b-container>
+     <!--  end Content -->
+    
+       
+    
+  <div class="footer">
+      <b-container >
+
+        <div class="text-center row">
+          <div class="cp col-12 pb-4" >Created with <i class="fas fa-heart text-danger"></i> by  <a class="text-white" href="https://github.com/AlexcastroDev/">Alexandro Castro</a></div>
+          </div>
+
+        <b-row class="text-center pt-3 align-self-center">
+          <b-col class="socials" cols="12">
+           <a href="https://www.linkedin.com/in/alexandro-castro-23420a173/"><i class="fab fa-linkedin text-info mr-1"></i></a>
+           <a href="http://github.com/alexcastroDev/"><i class="fab fa-github-alt mr-1"></i></a>
+           </b-col>
+        </b-row>
+     
+      </b-container>
     </div>
-  </nav>
 
-  <!-- <img style="display: none" src="https://images.uncyc.org/pt/2/26/Toasty.png"
-		 alt="Toasty Mortal Kombar Clássico" /> -->
-  <img style="display: none" src="https://avatars0.githubusercontent.com/u/38192405?s=460&u=f91734ab8bddb1ffa77c8c7783950a33a8442905&v=4"
-		 alt="Toasty Mortal Kombar Clássico" />
-    <script src="./script.js"></script>
+     <!-- ScrollToTop -->
+       <a v-show="window.pageYOffset   > 10" data-scroll href="#home" id="goTop" style="display: block;" class="text-center"><i class="fas fa-arrow-up text-white goTop"></i></a>
+     <!--  end ScrollToTop -->
+
+  </div>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+<script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
+<script src="plugins/smooth.js"></script>
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+<script src="https://unpkg.com/vue-screen/dist/vue-screen.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148924333-3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-148924333-3');
+</script>
+
+<script>
+  
+    var app = new Vue({
+        el: '#app',
+        data: {
+          whoami: "Developer",
+          menu: true,
+          modals: {
+            fluttership: false
+          },
+          studies: [
+            {
+              title: "Data Science",
+              time: "2020  ~ present",
+              where: "Cruzeiro do sul",
+              what: "Data minnig, databases, IA, Machine learning, project integration, Operacional System, Computer Science"
+            },
+            {
+              title: "Frontend",
+              time: "2020  ~ 2020",
+              where: "Origamid",
+              what: "HTML5, CSS3, keyframes, UI / UX, Javascript, ES6"
+            },
+            {
+              title: "Flutter",
+              time: "2019  ~ 2019",
+              where: "Udemy",
+              what: "Widgets, Dart Lang, Constructors, Methods, Functions, SqLite, API integrations"
+            },
+            {
+              title: "PHP",
+              time: "2019  ~ 2019",
+              where: "Udemy",
+              what: "PHP 5.6, 7.x,  PSR's, best practices, frameworks"
+            },
+          ],
+          jobs: [
+            {
+              title: "DealerUP",
+              time: "2019  ~ present",
+              where: "Software Engineer",
+              what: "Developed & maintained multiple products, Created frontend with VueJS and Web Services with Laravel"
+            },
+            {
+              title: "H1 Code",
+              time: "2019  ~ present",
+              where: "Freelancer",
+              what: "Mobile development with Flutter, Web Development with Elementor / Wordpress, WebApp SPA and PWA"
+            },
+            {
+              title: "StudioPrime",
+              time: "2018  ~ 2019",
+              where: "FullStack developer",
+              what: "Developed & maintained audio visual product with html, css, Javascript, jQuery and php as Backend"
+            },
+            {
+              title: "PagliaHost",
+              time: "2014 ~ 2018",
+              where: "Freelancer",
+              what: "Cloud Manager on demand, Core developer, Backend developer, Maintained Web services with NodeJS"
+            },
+          ]
+        },
+        methods: {
+          isMobile() {
+            if(this.$screen.lg){
+              return false;
+            }
+            return true;
+          },
+        movingMouse(event) {
+          let w = window.innerWidth
+          let  elements = [
+            {
+              element:  document.querySelector('.dart'),
+              x: 130,
+              y: 20
+            },
+            {
+              element:  document.querySelector('.php'),
+              x: w - 400 ,
+              y: 20
+            },
+            {
+              element:  document.querySelector('.flutter'),
+              x: w - 500 ,
+              y: 180
+            },
+            {
+              element:  document.querySelector('.react'),
+              x: 400 ,
+              y: 80
+            },
+            {
+              element:  document.querySelector('.angular'),
+              x: w - 500 ,
+              y: 380
+            },
+            {
+              element:  document.querySelector('.js'),
+              x: 120 ,
+              y: 180
+            },
+            {
+              element:  document.querySelector('.vue'),
+              x: 180 ,
+              y: 380
+            },
+            {
+              element:  document.querySelector('.docker'),
+              x: w - 360 ,
+              y: 500
+            },
+            {
+              element:  document.querySelector('.mysql'),
+              x: 120 ,
+              y: 500
+            },
+            {
+              element:  document.querySelector('.laravel'),
+              x: w - 300 ,
+              y: 280
+            },
+            {
+              element:  document.querySelector('.jquery'),
+              x: 340 ,
+              y: 560
+            },
+            {
+              element:  document.querySelector('.bootstrap'),
+              x: 550 ,
+              y: 30
+            },
+           ];
+
+           for(let item of elements) {
+             item.element.style.opacity =1
+             TweenMax.to(item.element, 1, {
+              x: item.x + event.clientX / 10,
+              y: item.y + event.clientY / 10
+            });
+           }
+                  },
+      menuDrawer(payload, check = false) {
+        if(check) {
+          this.menu = this.isMobile() ?  payload : this.menu;
+        } else{
+          this.menu = payload;
+        }
+      }
+      },
+      mounted() {
+        // Check if show floating langs
+        if(!this.isMobile()) {
+          window.addEventListener('mousemove', this.movingMouse);
+        }
+        //  Check if show or hide menu
+        if(this.isMobile()) {
+            this.menu  = false
+        }
+        // 
+        let whoami = ['Software Engineer','Frontend Developer', 'Backend  Developer']
+        let i = 0;
+        
+        setInterval(() => { 
+          if(i >= whoami.length)  {
+            i = 0;
+          }
+          this.whoami = whoami[i];
+          i++;
+         }, 2000);
+
+        
+      },
+      destroyed() {
+        window.removeEventListener('mousemove', this.movingMouse);
+      },
+    })
+</script>
 </html>
