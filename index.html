@@ -1,11 +1,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:url"           content="https://cv.fluttership.com.br" />
+    <meta property="og:url"           content="https://willianferreira.dev" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Willian Ferreira" />
     <meta property="og:description"   content="CV Willian Ferreira" />
-    <meta property="og:image"         content="https://i.imgur.com/5vIKSig.png" />
+    <meta property="og:image"         content="" />
     <meta name="description" content="CV Willian Ferreira">
     <meta name="keywords" content="developer, canada, europe, cv, card">
     <meta name="author" content="Willian Ferreira">
@@ -13,7 +13,7 @@
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
-    <link rel="icon" type="image/png" href="https://i.imgur.com/5vIKSig.png" />
+    <link rel="icon" type="image/png" href="" />
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
@@ -21,7 +21,7 @@
        <!--  Vue App -->
     <div id="app">
              <!--  Menu -->
-       <b-sidebar :width="110" id="sidebar-border" v-model="menu" bg-variant="none" sidebar-class="main-menu">
+       <b-sidebar :width="'110'" id="sidebar-border" v-model="menu" bg-variant="none" sidebar-class="main-menu">
         <b-navbar-nav data-scroll-header class="text-center" align="center">
           <a class="pb-4" @click="menuDrawer(false, true)" data-scroll href="#home"><i class="fas fa-home"></i></a>
           <a class="pb-4" @click="menuDrawer(false, true)" data-scroll href="#about"><i class="fas fa-user-tie"></i></a>
@@ -53,11 +53,11 @@
                   </b-avatar>
                 </p>
                 <span class="name">Willian Ferreira</span>
-                <p> <span class="whoami">I'm a  
+                <p> <span class="whoami">Eu sou 
                   <span class="whoami whoami-animation"> {{whoami}}</span>
                   <p>
                     <!-- href="https://docs.google.com/document/d/1GuHjv0U_z-HUgL-2JQi1-z264uP18vA7" -->
-                    <b-button  target="blank" variant="danger">Hire me</b-button>
+                    <b-button  target="blank" variant="danger">Entre em contato</b-button>
                   </p>
                   <p>
                     <a href="https://www.linkedin.com/in/sirwilld/" target="_blank"><i class="fab fa-linkedin text-white  socials"></i></a>
@@ -97,7 +97,7 @@
       <div class="spacer-inner"></div>
        <!--  About -->
       <section id="about" :class="menu ? 'pl-5' : ''">
-        <h2 class="title-section title-animation pb-5">About me</h2>
+        <h2 class="title-section title-animation pb-5">Sobre mim</h2>
         <div class="row">
           <div class="col-12 col-lg-2 col-md-12 text-center pt-5">
             <b-avatar class="fixBootstrapAvatar" size="lg">
@@ -107,15 +107,15 @@
 
             <div class="col-12 col-lg-10 col-md-12 mt-3 p-2">
             <div class="arrow"></div>
-            <b-card bg-variant="white" text-variant="dark" title="Hello, Company!" class="radius-card shadow-card ">
+            <b-card bg-variant="white" text-variant="dark" title="Olá, seja bem vindo!" class="radius-card shadow-card ">
               <div class="row">
                 <div class="col-12 col-lg-6 col-md-12">
                 <b-card-text>
-                  <p>I am Willian Ferreira, Software Engineer from Estância Velha, Rio Grande do Sul, Brazil. </p>
-                  <p>I have large experience with web development frontend and backend.</p>
+                  <p>Eu sou Willian Ferreira, Desenvolvedor Web FullStack e Mobile Híbrido. </p>
+                  <p>Eu tenho experiễncia com desenvolvimento FrontEnd, BackEnd, Banco de dados e um pouco de servidores</p>
                   
                 </b-card-text>
-                <b-button href="https://docs.google.com/document/d/1GuHjv0U_z-HUgL-2JQi1-z264uP18vA7" target="blank" variant="danger"><i class="fab fa-google-drive"></i> Download my CV</b-button>
+                <b-button href="" target="blank" variant="danger"><i class="fab fa-google-drive"></i> Baixar meu currículo</b-button>
               </div>
               <div class="col-12 col-lg-6 col-md-12 mt-2">
                 <b-progress class="mt-2" max="100" show-value>
@@ -149,10 +149,10 @@
        <!--  Experience -->
       <div class="spacer-inner"></div>
       <section id="experience" :class="menu ? 'pl-5' : ''">
-        <h2 class="title-section title-animation pb-5">Experience</h2>
+        <h2 class="title-section title-animation pb-5">Experiência</h2>
         <b-row align-h="around" class="p-1">
           <b-row align-h="around" v-show="isMobile()" class="p-4">
-            <h2 class="title-animation " style="text-align: left !important">Academic</h2>
+            <h2 class="title-animation " style="text-align: left !important">Academica</h2>
             </b-row>
         <b-card bg-variant="white" text-variant="dark"  class="radius-card col-12 col-lg-5 col-md-12">
         <div class="timeline" v-for="(item, key) in studies" v-bind:key="key" >
@@ -171,7 +171,7 @@
     
        </b-card>
        <b-row align-h="around" v-show="isMobile()" class="p-4">
-       <h2 class="title-animation " style="text-align: left !important">Jobs</h2>
+       <h2 class="title-animation " style="text-align: left !important">Trabalhos</h2>
        </b-row>
 
        
@@ -273,7 +273,7 @@
         <!-- Certificados -->
       <div class="spacer-inner"></div>
       <section id="projects" :class="menu ? 'pl-5' : ''">
-        <h2 class="title-section title-animation pb-5">Projects</h2>
+        <h2 class="title-section title-animation pb-5">Projetos</h2>
         <b-card-group deck>
           <b-card
           border-variant="primary"
@@ -310,30 +310,6 @@
 
          <!-- get in touch -->
       <div class="spacer-inner"></div>
-      <section id="contact" :class="menu ? 'pl-5' : ''">
-        <h2 class="title-section title-animation">Get In Touch</h2>
-        <div class="row" :class="isMobile() ? 'p-1' : 'pl-3'" >
-          <b-jumbotron>
-            <template v-slot:lead>
-              <p>Do you want to download this website, no problem! This is open source!</p>
-              <p>Remember to star this repository!</p>
-              <p>Remember to request a merge if you find a bug or want to improve!</p>
-
-            </template>
-        
-            <hr class="my-4">
-        
-            <p>
-             Need contact me? Let's go!
-            </p>
-        
-            <div class="row">
-              <div class="p-2"><b-button variant="success" href="https://api.whatsapp.com/send?phone=5521970879050&text=Hello%20Willian%20Ferreira!"><i class="fab fa-whatsapp"></i> WhatsApp</b-button></div>
-              <div class="p-2"><b-button variant="info"  href="mailto:desenvolvimento@fluttership.com.br"> desenvolvimento@fluttership.com.br</b-button></div>
-          </div>
-          </b-jumbotron>
-      </div> 
-      </section>
        <!-- End Projects -->
 
     </b-container>
@@ -341,17 +317,17 @@
     
        
     
-  <div class="footer">
+  <div class="footer" style="height: 40vh;">
       <b-container >
 
         <div class="text-center row">
-          <div class="cp col-12 pb-4" >Created with <i class="fas fa-heart text-danger"></i> by  <a class="text-white" href="https://github.com/sirwilld/">Willian Ferreira</a></div>
+          <div class="cp col-12 pb-4" >Willian Ferreira</a></div>
           </div>
 
         <b-row class="text-center pt-3 align-self-center">
           <b-col class="socials" cols="12">
-           <a href="https://www.linkedin.com/in/Willian-Ferreira-23420a173/"><i class="fab fa-linkedin text-info mr-1"></i></a>
-           <a href="http://github.com/alexFerreiraDev/"><i class="fab fa-github-alt mr-1"></i></a>
+           <a href="https://www.linkedin.com/in/sirwilld/"><i class="fab fa-linkedin text-info mr-1"></i></a>
+           <a href="http://github.com/sirwilld/"><i class="fab fa-github-alt mr-1"></i></a>
            </b-col>
         </b-row>
      
@@ -393,54 +369,54 @@ gtag('config', 'UA-148924333-3');
           },
           studies: [
             {
-              title: "Data Science",
-              time: "2020  ~ present",
-              where: "Cruzeiro do sul",
-              what: "Data minnig, databases, IA, Machine learning, project integration, Operacional System, Computer Science"
+              title: "Uninter",
+              time: "2019 ~ atualmente",
+              where: "Análise e Desenvolvimento de Sistemas",
+              what: "Tecnólogo em Análise e Desenvolvimento de Sistemas"
             },
             {
-              title: "Frontend",
-              time: "2020  ~ 2020",
-              where: "Origamid",
-              what: "HTML5, CSS3, keyframes, UI / UX, Javascript, ES6"
-            },
-            {
-              title: "Flutter",
-              time: "2019  ~ 2019",
-              where: "Udemy",
-              what: "Widgets, Dart Lang, Constructors, Methods, Functions, SqLite, API integrations"
-            },
-            {
-              title: "PHP",
-              time: "2019  ~ 2019",
-              where: "Udemy",
-              what: "PHP 5.6, 7.x,  PSR's, best practices, frameworks"
+              title: "Escolas & Faculdades QI",
+              time: "2017 ~ 2018",
+              where: "Técnico em Informática",
+              what: "Curso técnico voltado para programação"
             },
           ],
           jobs: [
             {
-              title: "DealerUP",
-              time: "2019  ~ present",
-              where: "Software Engineer",
-              what: "Developed & maintained multiple products, Created frontend with VueJS and Web Services with Laravel"
+              title: "Elum Digital Think",
+              time: "2018 ~ atualmente",
+              where: "Full Stack Developer",
+              what: "A Elum Digital Think tem como principal produto um sistema voltado para Gestão em Engenharia e Medicina do Trabalho (GEMT) onde, eu sou o desenvolvedor responsável pelo projeto."
             },
             {
-              title: "H1 Code",
-              time: "2019  ~ present",
-              where: "Freelancer",
-              what: "Mobile development with Flutter, Web Development with Elementor / Wordpress, WebApp SPA and PWA"
+              title: "Segure - Segurança do Trabalho",
+              time: "2018 ~ 2018",
+              where: "Full Stack Developer",
+              what: "PHP, Laravel, Codeigniter, Javascript, JQuery, Angular+, AngularJS, HTML5, CSS3 e MySQL"
             },
             {
-              title: "StudioPrime",
-              time: "2018  ~ 2019",
-              where: "FullStack developer",
-              what: "Developed & maintained audio visual product with html, css, Javascript, jQuery and php as Backend"
+              title: "Segure - Segurança do Trabalho",
+              time: "2017 ~ 2018",
+              where: "Programador Estagiário",
+              what: "Estagiário de Programação em PHP, Codeigniter, JQuery, AngularJS, HTML5, CSS3 e MySQL"
             },
             {
-              title: "PagliaHost",
-              time: "2014 ~ 2018",
-              where: "Freelancer",
-              what: "Cloud Manager on demand, Core developer, Backend developer, Maintained Web services with NodeJS"
+              title: "Sincronia Call Center",
+              time: "2017 ~ 2017",
+              where: "Estágiario Suporte Técnico  (T.I)",
+              what: "Fui responsável por auxiliar os alunos do MédiaTec no módulo de Internet I"
+            },
+            {
+              title: "Escolas & Faculdade QI",
+              time: "2017 ~ 2017",
+              where: "Estágio Monitoria",
+              what: "Fui responsável pela postagem de anúncio da oi, criação de conta para anúncios, criação de bots, manutenção de computares e impressoras."
+            },
+            {
+              title: "Cinestystem Cinema",
+              time: "2017 ~ 2017",
+              where: "Atendente",
+              what: "Fui responsável por fazer o atendimento na bilheteria, na bomboniere, e na recepção do cinema."
             },
           ]
         },
@@ -542,7 +518,7 @@ gtag('config', 'UA-148924333-3');
             this.menu  = false
         }
         // 
-        let whoami = ['Software Engineer','Frontend Developer', 'Backend  Developer']
+        let whoami = ['Desenvolvedor FullStack',' Desenvolvedor Frontend', 'Desenvolvedor Backend']
         let i = 0;
         
         setInterval(() => { 
