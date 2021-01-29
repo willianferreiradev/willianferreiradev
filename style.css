@@ -16,6 +16,10 @@ body {
   background-color: #242526;
 }
 
+h1, h4 {
+  transition: 0.5s;
+}
+
 #app {
   text-align: center;
   color: #fefefe;
