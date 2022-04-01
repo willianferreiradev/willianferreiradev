@@ -1,22 +1,21 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 html {
-  overflow-x: hidden;
+  overflow: hidden !important;
 }
 
 body {
-  overflow-x: hidden;
-  position: relative;
-  height: 90vh;
+  overflow: hidden !important;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #242526;
 }
 
-h1, h4 {
+h1,
+h4 {
   transition: 0.5s;
 }
 
@@ -137,4 +136,23 @@ ul.social-icons {
 
 .fa-github:hover {
   background-color: #5a32a3;
+}
+
+#winScreen {
+  /* background-image: url('assets/tosty.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; */
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  height: 300px;
+  transition: opacty 0.5s ease-in-out;
+}
+
+#winScreen[data-status='active'] {
+  opacity: 1;
 }
