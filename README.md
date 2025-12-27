@@ -1,7 +1,7 @@
 # 👋 Olá, eu sou o Willian Ferreira
 
-[![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:contato@willianferreira.dev)](mailto:contato@willianferreira.dev)
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/willianferreiradev/)]
+[![Email Badge](https://img.shields.io/badge/-Email-0078D4?style=flat&logo=Mail&logoColor=white)](mailto:contato@willianferreira.dev)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/willianferreiradev/)
 [![GitHub followers](https://img.shields.io/github/followers/willianferreiradev?label=Follow&style=social)](https://github.com/willianferreiradev)
 
 ---
