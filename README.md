@@ -15,7 +15,7 @@ Além disso, adoro estudar **desenvolvimento de jogos**, mecânicas de física e
 
 ## 📫 Contato
 Sinta-se à vontade para entrar em contato!  
-✉️ Email: [contato@willianferreira.dev](mailto:contato@willianferreira.dev)  
+✉️ Email: [williannfferreira@gmail.com](mailto:williannfferreira@gmail.com)  
 🔗 LinkedIn: [linkedin.com/in/willianferreiradev](https://www.linkedin.com/in/willianferreiradev/)  
 
 ---
